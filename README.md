@@ -22,7 +22,7 @@ _a responsive table jQuery plugin_
 If you use [Bower.io](http://bower.io), you can download *Tabloïd* and use it with:
 
 ````
-bower install --save jquery.tabloid
+bower install --save tabloid
 ````
 
 
