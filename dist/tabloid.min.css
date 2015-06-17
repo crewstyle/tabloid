@@ -1,0 +1,6 @@
+/*!
+ * Tabloïd v1.0.0 - "Sogeking no shima deeeeeee - One Piece"
+ * Copyright 20xx Achraf Chouk <achrafchouk@gmail.com>
+ *
+ * tabloid.css
+ */.table-wrapper{overflow:hidden;position:relative}.scrollable{overflow:scroll;overflow-y:hidden}.scrollable table{margin-bottom:0}.scrollable td,.scrollable th{overflow:hidden;position:relative;white-space:nowrap}.scrollable table.pinned td,.scrollable td:first-child,.scrollable th:first-child{display:none}.pinned{background-color:#fff;border-left:1px solid #ececec;border-right:1px solid #ececec;left:0;overflow:hidden;overflow-x:scroll;position:absolute;top:0}.pinned table{border-left:none;border-right:none;width:100%}.pinned td,.pinned th{white-space:nowrap}.pinned td:last-child{border-bottom:0}

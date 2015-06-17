@@ -1,0 +1,26 @@
+{
+  "name": "jquery.tabloid",
+  "version": "1.0.0",
+  "homepage": "https://github.com/crewstyle/tabloid",
+  "authors": [
+    "Achraf Chouk <achrafchouk@gmail.com>"
+  ],
+  "description": "A responsive table jQuery plugin",
+  "main": ["dist/tabloid.min.js"],
+  "keywords": [
+    "responsive",
+    "table",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
