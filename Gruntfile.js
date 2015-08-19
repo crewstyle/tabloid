@@ -26,7 +26,7 @@ module.exports = function (grunt){
         //JShint validation
         jshint: {
             all: [
-                '<%= yohoho.path.src %>/tabloid.js'
+                '<%= yohoho.path.src %>/<%= yohoho.name %>.js'
             ]
         },
 
