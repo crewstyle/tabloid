@@ -6,7 +6,9 @@
     "Achraf Chouk <achrafchouk@gmail.com>"
   ],
   "description": "A responsive table jQuery plugin",
-  "main": ["dist/tabloid.min.js"],
+  "main": [
+    "dist/tabloid.min.js"
+  ],
   "keywords": [
     "responsive",
     "table",

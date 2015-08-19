@@ -23,6 +23,13 @@ module.exports = function (grunt){
         //packages are listed here
         pkg: grunt.file.readJSON('package.json'),
 
+        //JShint validation
+        jshint: {
+            all: [
+                '<%= yohoho.path.src %>/tabloid.js'
+            ]
+        },
+
         //1. remove any previously-created files
         clean: [
             '<%= yohoho.path.tar %>/*',
@@ -40,14 +47,7 @@ module.exports = function (grunt){
             }
         },
 
-        //3. JShint validation
-        jshint: {
-            all: [
-                '<%= yohoho.path.tar %>/*.js'
-            ]
-        },
-
-        //4. uglify JS files
+        //3. uglify JS files
         uglify: {
             options: {
                 preserveComments: 'some'
@@ -87,7 +87,7 @@ module.exports = function (grunt){
     //------ [REGISTER TASKS] ------//
 
     //JShint validation task: grunt hint
-    grunt.registerTask('hint',      ['jshint']);
+    grunt.registerTask('test',      ['jshint']);
 
     //default task: `grunt default` / `grunt`
     grunt.registerTask('default',   ['clean','cssmin','uglify']);
