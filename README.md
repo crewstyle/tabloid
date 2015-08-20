@@ -1,4 +1,4 @@
-# Tabloïd
+# Tabloïd [![Build Status](https://travis-ci.org/crewstyle/tabloid.svg?branch=master)](https://travis-ci.org/crewstyle/tabloid)
 
 _a responsive table jQuery plugin_
 
