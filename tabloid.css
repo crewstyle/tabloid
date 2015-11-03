@@ -1,35 +1,35 @@
 /*!
- * Tabloïd v1.0.0 - "Sogeking no shima deeeeeee - One Piece"
+ * Tabloïd v1.0.1 - "Sogeking no shima deeeeeee - One Piece"
  * Copyright 20xx Achraf Chouk <achrafchouk@gmail.com>
  *
  * tabloid.css
  */
 
-.table-wrapper {
+.tabloid-wrapper {
     overflow: hidden;
     position: relative;
 }
 
-.scrollable {
+.tabloid-scrollable {
     overflow: scroll;
     overflow-y: hidden;
 }
-.scrollable table {
+.tabloid-scrollable table {
     margin-bottom: 0;
 }
-.scrollable td, .scrollable th {
+.tabloid-scrollable td, .tabloid-scrollable th {
     overflow: hidden;
     position: relative;
     white-space: nowrap;
 }
-.scrollable th:first-child,
-.scrollable td:first-child,
-.scrollable td:first-child,
-.scrollable table.pinned td {
+.tabloid-scrollable th:first-child,
+.tabloid-scrollable td:first-child,
+.tabloid-scrollable td:first-child,
+.tabloid-scrollable .tabloid-pinned td {
     display: none;
 }
 
-.pinned {
+.tabloid-pinned {
     background-color: #ffffff;
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
@@ -39,14 +39,14 @@
     position: absolute;
     top: 0;
 }
-.pinned table {
+.tabloid-pinned table {
     border-left: none;
     border-right: none;
     width: 100%;
 }
-.pinned th, .pinned td {
+.tabloid-pinned th, .tabloid-pinned td {
     white-space: nowrap;
 }
-.pinned td:last-child {
+.tabloid-pinned td:last-child {
     border-bottom: 0;
 }

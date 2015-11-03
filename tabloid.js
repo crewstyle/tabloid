@@ -1,5 +1,5 @@
 /*! *//*!
- * tabloid.js v1.0.0 - "Sogeking no shima deeeeeee - One Piece"
+ * tabloid.js v1.0.1 - "Sogeking no shima deeeeeee - One Piece"
  * ~~~~~~~~~~~~~~~~~~
  *
  * Example of use HTML:
@@ -80,21 +80,21 @@
     Tabloid.prototype.splitTable = function (original){
         var _tabloid = this;
 
-        original.wrap('<div class="table-wrapper" />');
+        original.wrap('<div class="tabloid-wrapper" />');
 
         var copy = original.clone();
         copy.find('td:not(:first-child), th:not(:first-child)').css('display', 'none');
         copy.removeClass('responsive');
 
-        original.closest('.table-wrapper').append(copy);
-        copy.wrap('<div class="pinned" style="width:'+_tabloid.options.rowWidth+';" />');
-        original.wrap('<div class="scrollable" style="margin-left:'+_tabloid.options.rowWidth+';" />');
+        original.closest('.tabloid-wrapper').append(copy);
+        copy.wrap('<div class="tabloid-pinned" style="width:'+_tabloid.options.rowWidth+';" />');
+        original.wrap('<div class="tabloid-scrollable" style="margin-left:'+_tabloid.options.rowWidth+';" />');
 
         _tabloid.setCells(original, copy);
     };
 
     Tabloid.prototype.unsplitTable = function (original){
-        original.closest('.table-wrapper').find('.pinned').remove();
+        original.closest('.tabloid-wrapper').find('.tabloid-pinned').remove();
         original.unwrap();
     };
 
@@ -157,4 +157,3 @@
         }
     };
 })(window.jQuery);
-
