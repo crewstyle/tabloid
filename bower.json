@@ -1,18 +1,20 @@
 {
-  "name": "yohoho.tabloid",
-  "version": "1.0.0",
-  "homepage": "https://github.com/crewstyle/tabloid",
+  "name": "yohoho.tabloyd",
+  "version": "2.0.0",
+  "homepage": "https://github.com/crewstyle/tabloyd",
   "authors": [
     "Achraf Chouk <achrafchouk@gmail.com>"
   ],
-  "description": "A responsive table jQuery plugin",
+  "description": "A responsive table very light jQuery plugin",
   "main": [
-    "dist/tabloid.min.js"
+    "dist/tabloyd.min.js"
   ],
   "keywords": [
+    "tabloyd",
     "responsive",
     "table",
-    "jquery"
+    "jquery-plugin",
+    "ecosystem:jquery"
   ],
   "ignore": [
     "**/.*",

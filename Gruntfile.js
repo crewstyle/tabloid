@@ -1,7 +1,7 @@
 /*! *//*!
  * ~~~~~~~~~~~~~~~~~~
- * Tabloïd - ™æß¬œ¨î∂
- * https://github.com/crewstyle/tabloid
+ * Tabloyd - ™æß¬œ¨Ú∂
+ * https://github.com/crewstyle/tabloyd
  * ~~~~~~~~~~~~~~~~~~
  * Copyright 20xx Achraf Chouk (http://github.com/crewstyle)
  */
@@ -12,7 +12,7 @@ module.exports = function (grunt){
     grunt.initConfig({
         //project settings
         yohoho: {
-            name: 'tabloid',
+            name: 'tabloyd',
             path: {
                 bow: 'bower_components',
                 src: '.',
