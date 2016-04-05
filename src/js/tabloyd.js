@@ -1,5 +1,5 @@
 /*! *//*!
- * tabloyd.js v2.0.0 - "Sogeking no shima deeeeeee - One Piece"
+ * tabloyd.js v2.0.1 - "Sogeking no shima deeeeeee - One Piece"
  * ~~~~~~~~~~~~~~~~~~
  *
  * Example of use HTML:
@@ -80,17 +80,20 @@
     Tabloyd.prototype.splitTable = function ($original){
         var _tabloyd = this;
 
-        $original.wrap('<div class="tabloid-wrapper" />');
+        //make it work only once
+        if (!$originas.parent().hasClass('tabloid-wrapper')) {
+            $original.wrap('<div class="tabloid-wrapper" />');
 
-        var $copy = $original.clone();
-        $copy.find('td:not(:first-child), th:not(:first-child)').css('display', 'none');
-        $copy.removeClass('responsive');
+            var $copy = $original.clone();
+            $copy.find('td:not(:first-child), th:not(:first-child)').css('display', 'none');
+            $copy.removeClass('responsive');
 
-        $original.closest('.tabloid-wrapper').append($copy);
-        $copy.wrap('<div class="tabloid-pinned" style="width:'+_tabloyd.options.rowWidth+'" />');
-        $original.wrap('<div class="tabloid-scrollable" style="margin-left:'+_tabloyd.options.rowWidth+'" />');
+            $original.closest('.tabloid-wrapper').append($copy);
+            $copy.wrap('<div class="tabloid-pinned" style="width:'+_tabloyd.options.rowWidth+'" />');
+            $original.wrap('<div class="tabloid-scrollable" style="margin-left:'+_tabloyd.options.rowWidth+'" />');
 
-        _tabloyd.setCells($original, $copy);
+            _tabloyd.setCells($original, $copy);
+        }
     };
 
     Tabloyd.prototype.unsplitTable = function ($original){
