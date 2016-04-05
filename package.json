@@ -1,6 +1,6 @@
 {
   "name": "yohoho.tabloyd",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A responsive table very light jQuery plugin",
   "main": "dist/tabloyd.min.js",
   "scripts": {

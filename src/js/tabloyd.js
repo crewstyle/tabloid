@@ -1,5 +1,5 @@
 /*! *//*!
- * tabloyd.js v2.0.1 - "Sogeking no shima deeeeeee - One Piece"
+ * tabloyd.js v2.0.3 - "Sogeking no shima deeeeeee - One Piece"
  * ~~~~~~~~~~~~~~~~~~
  *
  * Example of use HTML:
@@ -81,7 +81,7 @@
         var _tabloyd = this;
 
         //make it work only once
-        if (!$originas.parent().hasClass('tabloid-wrapper')) {
+        if (!$original.parent().hasClass('tabloid-wrapper')) {
             $original.wrap('<div class="tabloid-wrapper" />');
 
             var $copy = $original.clone();
