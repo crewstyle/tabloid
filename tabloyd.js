@@ -145,7 +145,7 @@
         destroy: function (){}
     };
 
-    $.fn.tabloid = function (method){
+    $.fn.tabloyd = function (method){
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
         }
