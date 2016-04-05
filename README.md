@@ -30,10 +30,16 @@ npm install yohoho.tabloyd
     <tr>
         <th>Head #1</th>
         <th>Head #2</th>
+        <th>Head #3</th>
+        <th>Head #4</th>
+        <th>Head #5</th>
     </tr>
     <tr>
         <td>Content #1</td>
         <td>Content #2</td>
+        <td>Content #3</td>
+        <td>Content #4</td>
+        <td>Content #5</td>
     </tr>
 </table>
 ````
