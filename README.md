@@ -1,4 +1,4 @@
-# Tabloyd [![Build Status](https://travis-ci.org/crewstyle/yohoho.tabloyd.svg?branch=master)](https://travis-ci.org/crewstyle/tabloyd)
+# Tabloyd [![Build Status](https://travis-ci.org/crewstyle/yohoho.tabloyd.svg?branch=master)](https://travis-ci.org/crewstyle/yohoho.tabloyd)
 
 _a responsive table very light jQuery plugin_  
 [![npm version](https://badge.fury.io/js/yohoho.tabloyd.svg)](https://badge.fury.io/js/yohoho.tabloyd)
