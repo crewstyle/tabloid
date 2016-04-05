@@ -52,7 +52,7 @@ rowWidth | string | '35%' | Fixed row size, in pixels, em or percent
 
 ## Dependencies
 
-jQuery 2.1.4
+jQuery latest
 
 
 ## Authors and Copyright
