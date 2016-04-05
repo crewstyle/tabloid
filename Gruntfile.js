@@ -1,94 +1,65 @@
 /*! *//*!
  * ~~~~~~~~~~~~~~~~~~
  * Tabloyd - ™æß¬œ¨Ú∂
- * https://github.com/crewstyle/tabloyd
+ * https://github.com/crewstyle/yohoho.tabloyd
  * ~~~~~~~~~~~~~~~~~~
  * Copyright 20xx Achraf Chouk (http://github.com/crewstyle)
  */
 
 module.exports = function (grunt){
-    //------ [REGISTER CONFIGURATION] ------//
+  //------ [CONFIGURATION] ------//
+  var Helpers = require('./tasks/helpers'),
+    filterAvailable = Helpers.filterAvailableTasks,
+    _ = grunt.util._,
+    path = require('path');
 
-    grunt.initConfig({
-        //project settings
-        yohoho: {
-            name: 'tabloyd',
-            path: {
-                bow: 'bower_components',
-                src: '.',
-                tar: 'dist'
-            }
-        },
+  //read package
+  Helpers.pkg = require('./package.json');
 
-        //packages are listed here
-        pkg: grunt.file.readJSON('package.json'),
+  //check time
+  if (Helpers.isPackageAvailable('time-grunt')) {
+    require('time-grunt')(grunt);
+  }
 
-        //JShint validation
-        jshint: {
-            all: [
-                '<%= yohoho.path.src %>/<%= yohoho.name %>.js'
-            ]
-        },
+  //loads task options from `tasks/options/` and tasks defined in `package.json`
+  var config = _.extend({},
+    require('load-grunt-config')(grunt, {
+      configPath: path.join(__dirname, 'tasks/options')
+    })
+  );
 
-        //1. remove any previously-created files
-        clean: [
-            '<%= yohoho.path.tar %>/*',
-            '<%= yohoho.path.tar %>/standalone/*',
-        ],
+  //loads tasks in `tasks`
+  grunt.loadTasks('tasks');
 
-        //2. minify CSS files
-        cssmin: {
-            compress: {
-                files: {
-                    '<%= yohoho.path.tar %>/<%= yohoho.name %>.min.css': [
-                        '<%= yohoho.path.src %>/<%= yohoho.name %>.css'
-                    ]
-                }
-            }
-        },
+  //set node environment
+  config.env = process.env;
 
-        //3. uglify JS files
-        uglify: {
-            options: {
-                preserveComments: 'some'
-            },
-            my_target: {
-                files: {
-                    //JS version including jQuery package
-                    '<%= yohoho.path.tar %>/<%= yohoho.name %>.min.js': [
-                        //jQuery
-                        '<%= yohoho.path.bow %>/jquery/dist/jquery.js',
-                        //Main
-                        '<%= yohoho.path.src %>/<%= yohoho.name %>.js'
-                    ],
-                    //JS version without jQuery package
-                    '<%= yohoho.path.tar %>/standalone/<%= yohoho.name %>.min.js': [
-                        '<%= yohoho.path.src %>/<%= yohoho.name %>.js'
-                    ]
-                }
-            }
-        }
-    });
 
-    //------ [REGISTER MODULES] ------//
+  //------ [TASKS REGISTRATION] ------//
+  //JShint validation
+  grunt.registerTask('test', 'Test JS files.', ['debug']);
+  grunt.registerTask('debug', filterAvailable([
+    'jshint:src'
+  ]));
 
-    //remove any previously-created files
-    grunt.loadNpmTasks('grunt-contrib-clean');
+  //Default task
+  grunt.registerTask('default', 'Build minified & production-ready files.', [
+    'cleanall',
+    'minify'
+  ]);
 
-    //minify CSS files
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
+  //Clean distributed files
+  grunt.registerTask('cleanall', filterAvailable([
+    'clean:dist'
+  ]));
 
-    //JShint validation
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+  //Minify and uglify files
+  grunt.registerTask('minify', filterAvailable([
+    'cssmin:src',
+    'uglify:src'
+  ]));
 
-    //uglify JS files
-    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    //------ [REGISTER TASKS] ------//
-
-    //JShint validation task: grunt hint
-    grunt.registerTask('test',      ['jshint']);
-
-    //default task: `grunt default` / `grunt`
-    grunt.registerTask('default',   ['clean','cssmin','uglify']);
+  //------ [INITIALIZATION] ------//
+  grunt.initConfig(config);
 };

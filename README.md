@@ -1,8 +1,11 @@
-# Tabloyd [![Build Status](https://travis-ci.org/crewstyle/tabloyd.svg?branch=master)](https://travis-ci.org/crewstyle/tabloyd)
+# Tabloyd [![Build Status](https://travis-ci.org/crewstyle/yohoho.tabloyd.svg?branch=master)](https://travis-ci.org/crewstyle/tabloyd)
 
 _a responsive table very light jQuery plugin_  
 [![npm version](https://badge.fury.io/js/yohoho.tabloyd.svg)](https://badge.fury.io/js/yohoho.tabloyd)
-[![GitHub version](https://badge.fury.io/gh/crewstyle%2Ftabloyd.svg)](https://badge.fury.io/gh/crewstyle%2Ftabloyd)  
+[![GitHub version](https://badge.fury.io/gh/crewstyle%2Fyohoho.tabloyd.svg)](https://badge.fury.io/gh/crewstyle%2Fyohoho.tabloyd)  
+
+
+## [Demo page](https://cdn.rawgit.com/crewstyle/yohoho.tabloyd/-see-readme-/demo/index.html)
 
 
 ## Package manager
@@ -52,7 +55,7 @@ rowWidth | string | '35%' | Fixed row size, in pixels, em or percent
 
 ## Dependencies
 
-jQuery latest
+jQuery **latest version**
 
 
 ## Authors and Copyright
@@ -63,4 +66,4 @@ Made with ♥ by **[Achraf Chouk](http://github.com/crewstyle "Achraf Chouk")**
 + http://twitter.com/crewstyle
 + http://github.com/crewstyle
 
-Please, read [LICENSE](https://github.com/crewstyle/tabloyd/blob/master/LICENSE "LICENSE") for more details.
+Please, read [LICENSE](https://github.com/crewstyle/yohoho.tabloyd/blob/master/LICENSE "LICENSE") for more details.
