@@ -5,7 +5,7 @@ _a responsive table very light jQuery plugin_
 [![GitHub version](https://badge.fury.io/gh/crewstyle%2Fyohoho.tabloyd.svg)](https://badge.fury.io/gh/crewstyle%2Fyohoho.tabloyd)  
 
 
-## [Demo page](https://cdn.rawgit.com/crewstyle/yohoho.tabloyd/eb15d4d04871dab86c3d2d06592117169b85745a/demo/index.html)
+## [Demo page](https://cdn.rawgit.com/crewstyle/yohoho.tabloyd/b1fd8f88456095365601cbc165f861df69385fac/demo/index.html)
 
 
 ## Package manager
